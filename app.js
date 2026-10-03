@@ -4,10 +4,13 @@ const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_Xsu52XLtDg8Zd2E5fn2mRg_Bp0UGCxt
 const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
 const $ = (id) => document.getElementById(id);
 const categories = {
-  income: ['Gaji', 'Usaha', 'Bonus', 'Investasi', 'Lainnya'],
-  expense: ['Makanan', 'Transportasi', 'Tagihan', 'Belanja', 'Hiburan', 'Kesehatan', 'Pendidikan', 'Rumah tangga', 'Lainnya']
+  income: ['Skripsi', 'Makalah', 'Jurnal', 'Jasa Desain', 'Lainnya'],
+  expense: ['Fee / Gaji Karyawan', 'Bonus', 'HPP', 'Marketing — Instagram']
 };
-const categoryIcons = { Gaji:'↗', Usaha:'◇', Bonus:'✦', Investasi:'◈', Makanan:'♨', Transportasi:'↗', Tagihan:'▤', Belanja:'◇', Hiburan:'♫', Kesehatan:'+', Pendidikan:'▣', 'Rumah tangga':'⌂', Lainnya:'•' };
+const categoryIcons = {
+  'Skripsi':'✎', 'Makalah':'▤', 'Jurnal':'◈', 'Jasa Desain':'◇', 'Lainnya':'•',
+  'Fee / Gaji Karyawan':'♙', 'Bonus':'✦', 'HPP':'▣', 'Marketing — Instagram':'◎'
+};
 let currentUser = null;
 let transactions = [];
 let currentPage = 'dashboard';
