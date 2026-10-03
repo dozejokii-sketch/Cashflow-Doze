@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0d0f">
-  <meta name="description" content="CashFlow — pencatatan keuangan pribadi dengan tampilan luxury.">
-  <title>CashFlow — Private Finance</title>
+  <meta name="description" content="DOZE CashFlow — manajemen keuangan profesional dengan tampilan luxury.">
+  <title>DOZE CashFlow — Private Finance</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script defer src="app.js"></script>
+  <script defer src="app.js?v=2"></script>
 </head>
 <body>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <section id="authView" class="auth-shell">
-    <div class="auth-brand"><div class="brand-mark">C</div><div><div class="brand-name">CASHFLOW</div><div class="brand-sub">PRIVATE FINANCE</div></div></div>
+    <div class="auth-brand"><div class="brand-mark">C</div><div><div class="brand-name">DOZE CASHFLOW</div><div class="brand-sub">PRIVATE FINANCE</div></div></div>
     <div class="auth-card">
       <p class="eyebrow">YOUR FINANCIAL SPACE</p>
       <h1 id="authTitle">Selamat datang kembali</h1>
@@ -33,7 +33,7 @@
 
   <div id="appView" class="app-shell hidden">
     <aside class="sidebar" id="sidebar">
-      <div class="brand"><div class="brand-mark">C</div><div><div class="brand-name">CASHFLOW</div><div class="brand-sub">PRIVATE FINANCE</div></div></div>
+      <div class="brand"><div class="brand-mark">C</div><div><div class="brand-name">DOZE CASHFLOW</div><div class="brand-sub">PRIVATE FINANCE</div></div></div>
       <div class="side-line"></div>
       <nav class="nav-list" aria-label="Navigasi utama">
         <button class="nav-item active" data-page="dashboard"><span>⌂</span> Dashboard</button>
@@ -45,7 +45,7 @@
     </aside>
 
     <main class="main-content">
-      <header class="mobile-header"><button id="menuToggle" class="icon-button" aria-label="Buka menu">☰</button><div class="brand-name">CASHFLOW</div><button id="mobileAdd" class="mobile-add" aria-label="Tambah transaksi">＋</button></header>
+      <header class="mobile-header"><button id="menuToggle" class="icon-button" aria-label="Buka menu">☰</button><div class="brand-name">DOZE CASHFLOW</div><button id="mobileAdd" class="mobile-add" aria-label="Tambah transaksi">＋</button></header>
       <div class="page-top"><div><p class="eyebrow">PRIVATE FINANCE / <span id="pageEyebrow">OVERVIEW</span></p><h1 id="pageTitle">Dashboard</h1><p class="muted" id="pageSubtitle">Ikhtisar keuanganmu bulan ini.</p></div><div class="top-actions"><label class="month-picker"><span>BULAN</span><input id="globalMonth" type="month"></label><button class="btn btn-gold" id="topAdd">＋ Transaksi baru</button></div></div>
 
       <section id="dashboardPage" class="page-section">
@@ -65,7 +65,7 @@
       <section id="addPage" class="page-section hidden"><section class="panel form-panel"><div class="panel-heading"><div><h2>Catat transaksi</h2><p>Masukkan detail pemasukan atau pengeluaran.</p></div><span class="gold-chip">NEW ENTRY</span></div><form id="transactionForm" class="transaction-form"><div class="field"><label for="txType">JENIS TRANSAKSI</label><select id="txType"><option value="expense">Pengeluaran</option><option value="income">Pemasukan</option></select></div><div class="field"><label for="txCategory">KATEGORI</label><select id="txCategory"></select></div><div class="field field-wide"><label for="txDescription">KETERANGAN</label><input id="txDescription" maxlength="140" required placeholder="Contoh: makan siang, gaji bulanan"></div><div class="field"><label for="txAmount">JUMLAH (RUPIAH)</label><div class="amount-input"><span>Rp</span><input id="txAmount" inputmode="numeric" required placeholder="50000"></div></div><div class="field"><label for="txDate">TANGGAL</label><input id="txDate" type="date" required></div><div class="form-actions"><button class="btn btn-quiet" type="button" data-goto="dashboard">Batal</button><button class="btn btn-gold" type="submit">SIMPAN TRANSAKSI →</button></div></form></section></section>
 
       <section id="summaryPage" class="page-section hidden"><div class="summary-grid"><section class="panel"><p class="eyebrow">MONTHLY POSITION</p><h2 class="summary-balance gold" id="summaryBalance">Rp0</h2><div class="summary-line"><span>Pemasukan</span><strong class="green" id="summaryIncome">Rp0</strong></div><div class="summary-line"><span>Pengeluaran</span><strong class="red" id="summaryExpense">Rp0</strong></div><div class="chart-block"><div class="panel-heading"><div><h2>Cash flow</h2><p>Perbandingan bulan terpilih</p></div></div><div class="bar-row"><span>Pemasukan</span><div class="bar-track"><div id="summaryIncomeBar" class="bar-fill green-bg"></div></div><strong id="summaryIncomeBarText">Rp0</strong></div><div class="bar-row"><span>Pengeluaran</span><div class="bar-track"><div id="summaryExpenseBar" class="bar-fill red-bg"></div></div><strong id="summaryExpenseBarText">Rp0</strong></div></div></section><section class="panel"><div class="panel-heading"><div><h2>Pengeluaran per kategori</h2><p>Distribusi berdasarkan kategori</p></div></div><div id="categoryBreakdown" class="category-breakdown"></div><div id="categoryEmpty" class="empty-state hidden">Belum ada data pengeluaran untuk bulan ini.</div></section></div></section>
-      <footer class="app-footer">CASHFLOW <span>•</span> PRIVATE FINANCE <span class="footer-right">Data tersimpan aman per akun</span></footer>
+      <footer class="app-footer">DOZE CASHFLOW <span>•</span> PRIVATE FINANCE <span class="footer-right">Data tersimpan aman per akun</span></footer>
     </main>
     <nav class="mobile-nav" aria-label="Navigasi mobile"><button class="active" data-page="dashboard"><span>⌂</span>Home</button><button data-page="transactions"><span>▤</span>Transaksi</button><button data-page="add"><span class="mobile-plus">＋</span>Tambah</button><button data-page="summary"><span>◈</span>Ringkasan</button></nav>
   </div>
